@@ -2,7 +2,7 @@
 
 - Node.jsはv10以降を使用してください。（async/awaitが動作しないと思います）
 - パラメーターにはUNIXタイムスタンプを使用します。
-- 実行に必要なファイルはcachebuster.jsのみです。
+- 実行に必要なファイルはcache-busting.jsのみです。
 - このプログラムはphpやSSIによるインクルードファイルでの利用を更新を想定しています。
 - このプログラムの目的は、**該当ファイルのパラメーターの更新**です。タグの生成は行わないため、outputに指定するファイルは以下のようにタグ込みで記述してください。
 
@@ -29,10 +29,10 @@ script(src="./dist/common/js/bundle.js" defer)
 
 ```
 // 通常
-$ node cachebuster.js (option)
+$ node cache-busting.js (option)
 
 //「ExperimentalWarning」を表示したくない場合
-$ node --no-warnings cachebuster.js (option)
+$ node --no-warnings cache-busting.js (option)
 ```
 
 ### オプション
