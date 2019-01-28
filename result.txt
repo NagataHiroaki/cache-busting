@@ -1,0 +1,4 @@
+link(rel="stylesheet" href="./dist/common/css/app.css")
+script(src="./dist/common/js/ie.js")
+script(src="./dist/common/js/vendor.js" defer)
+script(src="./dist/common/js/bundle.js" defer)
