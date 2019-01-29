@@ -21,9 +21,21 @@ script(src="./dist/common/js/bundle.js" defer)
 
 出力先のファイルを定義します。
 
+```
+const output = 'hoge.txt';
+```
+
 **watchList**
 
 監視するファイルを定義します。
+
+```
+const watchList = [
+  './public/parts/ir/css/hoge.css',
+  './public/parts/ir/js/hoge.js',
+  './public/parts/ir/js/huga.js'
+];
+```
 
 ## 実行
 
