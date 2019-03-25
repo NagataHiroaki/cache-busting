@@ -18,6 +18,8 @@ const fs = require("fs");
 const fsSync = fs.promises;
 const PATH = require("path");
 
+// ファイルのパラメータを上書き
+// パラメータがない場合は付与する
 const overwrite = async filename => {
   try {
     let content = await fsSync.readFile(PATH.join(__dirname, output), "utf8");
@@ -37,6 +39,7 @@ const overwrite = async filename => {
   }
 };
 
+// ファイルの更新を監視
 const watch = () => {
   watchList.forEach(item => {
     fs.watch(PATH.join(__dirname, item), function(event, filename) {
@@ -46,6 +49,7 @@ const watch = () => {
   });
 };
 
+// 実行
 const build = async () => {
   for (let item of watchList) {
     const filename = item.split("/").pop();
@@ -53,6 +57,7 @@ const build = async () => {
   }
 };
 
+// 引数として buildかwatchのいずれかがわたされた場合のみ実行
 switch (process.argv[2]) {
   case "watch":
     watch();
